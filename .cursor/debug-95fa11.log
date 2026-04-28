@@ -1,0 +1,3 @@
+{"sessionId":"95fa11","runId":"pre-fix","hypothesisId":"H3","location":"lib/db/safe.ts:17","message":"safeQuery short-circuited due to local DATABASE_URL","data":{"label":"home.featured","ms":0},"timestamp":1777385073974}
+{"sessionId":"95fa11","runId":"pre-fix","hypothesisId":"H3","location":"lib/db/safe.ts:17","message":"safeQuery short-circuited due to local DATABASE_URL","data":{"label":"home.categories","ms":0},"timestamp":1777385073978}
+{"sessionId":"95fa11","runId":"pre-fix","hypothesisId":"H3","location":"lib/db/safe.ts:17","message":"safeQuery short-circuited due to local DATABASE_URL","data":{"label":"account.orders","ms":0},"timestamp":1777385084455}

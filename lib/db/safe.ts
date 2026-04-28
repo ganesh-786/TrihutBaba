@@ -9,7 +9,16 @@ export async function safeQuery<T>(
   label = "db"
 ): Promise<T> {
   try {
-    if (!process.env.DATABASE_URL) return fallback;
+    const url = process.env.DATABASE_URL;
+    if (!url) return fallback;
+    // Fast-fail in dev if DATABASE_URL points at local Postgres that's not running.
+    // This prevents very slow page loads due to repeated connection attempts.
+    if (
+      process.env.NODE_ENV !== "production" &&
+      (url.includes("localhost") || url.includes("127.0.0.1"))
+    ) {
+      return fallback;
+    }
     return await fn();
   } catch (err) {
     if (process.env.NODE_ENV !== "production") {

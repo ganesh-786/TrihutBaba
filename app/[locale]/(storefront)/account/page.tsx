@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { Link } from "@/lib/i18n/routing";
 import { Button } from "@/components/ui/button";
-import { getCurrentUser } from "@/lib/auth";
+import { getCurrentSession, getCurrentUser } from "@/lib/auth";
 import { db } from "@/lib/db/client";
 import { orders } from "@/lib/db/schema";
 import { eq, desc } from "drizzle-orm";
@@ -20,15 +20,16 @@ export default async function AccountPage({
   const t = await getTranslations({ locale, namespace: "account" });
   const tOrder = await getTranslations({ locale, namespace: "order.status" });
 
+  const sessionUser = await getCurrentSession();
+  if (!sessionUser) redirect(`/${locale}/account/login`);
   const user = await getCurrentUser();
-  if (!user) redirect(`/${locale}/account/login`);
 
   const myOrders = await safeQuery(
     () =>
       db
         .select()
         .from(orders)
-        .where(eq(orders.userId, user.id))
+        .where(eq(orders.userId, user?.id ?? "00000000-0000-0000-0000-000000000000"))
         .orderBy(desc(orders.createdAt))
         .limit(20),
     [],
@@ -38,10 +39,19 @@ export default async function AccountPage({
   return (
     <div className="container-x py-10">
       <h1 className="font-display text-3xl font-bold">
-        {t("welcome", { name: user.name ?? user.email ?? "" })}
+        {t("welcome", {
+          name: user?.name ?? user?.email ?? sessionUser.email ?? "",
+        })}
       </h1>
 
       <h2 className="mt-8 font-display text-xl font-bold">{t("orders")}</h2>
+      {!user && (
+        <div className="mt-4 rounded-xl border bg-secondary/30 p-4 text-sm text-muted-foreground">
+          {locale === "ne"
+            ? "तपाईंको खाता प्रोफाइल डाटाबेसमा अझै सेटअप भएको छैन। DATABASE_URL सही राखेर माइग्रेशन चलाएपछि अर्डर इतिहास देखिन्छ।"
+            : "Your profile database is not configured yet. Once DATABASE_URL is set correctly and migrations are applied, your order history will appear here."}
+        </div>
+      )}
       {myOrders.length === 0 ? (
         <div className="mt-4 rounded-xl border-2 border-dashed bg-secondary/30 p-12 text-center">
           <p className="text-muted-foreground">{t("no_orders")}</p>
