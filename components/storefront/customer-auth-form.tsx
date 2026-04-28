@@ -37,6 +37,9 @@ export function CustomerAuthForm({ locale }: { locale: string }) {
           description: "Check your email to confirm your address.",
           variant: "success",
         });
+        // Option A: with email confirmation enabled, guide user to log in after confirming.
+        setMode("login");
+        setPassword("");
       } else {
         const { error } = await supabase.auth.signInWithPassword({
           email,
