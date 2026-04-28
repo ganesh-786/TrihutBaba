@@ -1,0 +1,180 @@
+{
+  "site": {
+    "name": "Trihutbaba Store & Machinery",
+    "tagline": "Nepal's trusted source for agriculture tools, seeds & machinery",
+    "description": "Buy genuine farm tools, seeds, fertilizers, pesticides and agriculture machinery online in Nepal. Fast delivery across the country, secure eSewa & Khalti payments."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "account": "Account",
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "admin": "Admin",
+    "search": "Search products...",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Genuine. Local. Affordable.",
+      "title": "Quality agriculture tools delivered to your doorstep",
+      "subtitle": "From hand tools to heavy machinery, seeds to fertilizers — Trihutbaba brings trusted agriculture supplies to every farmer in Nepal.",
+      "cta_shop": "Shop now",
+      "cta_categories": "Browse categories"
+    },
+    "features": {
+      "delivery": {
+        "title": "Nationwide delivery",
+        "desc": "We ship to all 77 districts of Nepal, fast and reliably."
+      },
+      "payments": {
+        "title": "Secure payments",
+        "desc": "Pay with eSewa, Khalti, or cash on delivery — your choice."
+      },
+      "genuine": {
+        "title": "100% genuine products",
+        "desc": "Every tool and seed packet is sourced from trusted suppliers."
+      },
+      "support": {
+        "title": "Expert support",
+        "desc": "Talk to real farmers — call us for advice on tools and crops."
+      }
+    },
+    "featured": "Featured products",
+    "shop_categories": "Shop by category",
+    "view_all": "View all"
+  },
+  "product": {
+    "add_to_cart": "Add to cart",
+    "buy_now": "Buy now",
+    "out_of_stock": "Out of stock",
+    "in_stock": "In stock",
+    "low_stock": "Only {count} left",
+    "sku": "SKU",
+    "category": "Category",
+    "brand": "Brand",
+    "weight": "Weight",
+    "description": "Description",
+    "specifications": "Specifications",
+    "related": "You might also like",
+    "price": "Price",
+    "save": "Save {amount}"
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty",
+    "empty_desc": "Add some products to get started.",
+    "continue_shopping": "Continue shopping",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shipping_calc": "Calculated at checkout",
+    "total": "Total",
+    "checkout": "Proceed to checkout",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "items": "{count, plural, =0 {no items} =1 {1 item} other {# items}}"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping_address": "Shipping address",
+    "payment_method": "Payment method",
+    "order_summary": "Order summary",
+    "place_order": "Place order",
+    "guest_checkout": "Continue as guest",
+    "have_account": "Have an account?",
+    "form": {
+      "full_name": "Full name",
+      "phone": "Phone number",
+      "email": "Email (for receipt)",
+      "province": "Province",
+      "district": "District",
+      "city": "City / Municipality",
+      "area": "Area / Tole",
+      "landmark": "Landmark (optional)",
+      "notes": "Order notes (optional)"
+    },
+    "esewa": "Pay with eSewa",
+    "khalti": "Pay with Khalti",
+    "cod": "Cash on delivery"
+  },
+  "payment": {
+    "success": {
+      "title": "Payment successful!",
+      "desc": "Thank you for your order. We'll send a confirmation to your email and SMS shortly.",
+      "track": "Track your order",
+      "continue": "Continue shopping"
+    },
+    "failure": {
+      "title": "Payment failed",
+      "desc": "Your payment was not completed. You can try again or choose a different method.",
+      "retry": "Try again",
+      "back": "Back to cart"
+    }
+  },
+  "account": {
+    "welcome": "Welcome back, {name}",
+    "orders": "My orders",
+    "addresses": "Addresses",
+    "profile": "Profile",
+    "no_orders": "You have no orders yet."
+  },
+  "order": {
+    "status": {
+      "pending": "Pending payment",
+      "paid": "Paid",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "number": "Order #{no}",
+    "placed_on": "Placed on {date}",
+    "items": "Items",
+    "tracking": "Tracking"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "made_with": "Made for Nepali farmers, with care.",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "newsletter": "Get farming tips & deals",
+    "subscribe": "Subscribe"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "try_again": "Try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "categories": "Categories",
+    "orders": "Orders",
+    "customers": "Customers",
+    "settings": "Settings",
+    "today_orders": "Today's orders",
+    "revenue": "Revenue",
+    "low_stock": "Low stock",
+    "new_product": "New product",
+    "new_category": "New category"
+  }
+}

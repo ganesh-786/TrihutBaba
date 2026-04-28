@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0ead8"/>
+      <stop offset="100%" stop-color="#d8e4cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <g transform="translate(200,200)" fill="#5b8a4a" opacity="0.55">
+    <path d="M0 -70 C-25 -50 -55 -20 -55 15 C-55 40 -25 60 0 60 C25 60 55 40 55 15 C55 -20 25 -50 0 -70 Z"/>
+    <rect x="-2" y="40" width="4" height="40" fill="#7a5b3a"/>
+  </g>
+  <text x="200" y="350" font-family="Inter, sans-serif" font-size="16" fill="#7a8a6a" text-anchor="middle">Trihutbaba</text>
+</svg>
